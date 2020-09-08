@@ -1,0 +1,16 @@
+version: "3.7"
+
+
+services:
+  cassandra:
+    image: "cassandra:3.11.4"
+    container_name: another_cassandra
+    ports:
+      - "9042:9042"
+    stdin_open: true
+    tty: true
+    healthcheck:
+      test: ["CMD-SHELL", "[ $$(nodetool statusgossip) = running ]"]
+      interval: 10s
+      timeout: 5s
+      retries: 50
