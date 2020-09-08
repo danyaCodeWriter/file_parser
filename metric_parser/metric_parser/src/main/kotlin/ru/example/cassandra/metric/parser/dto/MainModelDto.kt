@@ -3,7 +3,7 @@ package ru.example.cassandra.metric.parser.dto
 import org.springframework.data.cassandra.core.mapping.PrimaryKey
 import org.springframework.data.cassandra.core.mapping.Table
 
-@Table("default.mainmodel")
+@Table
 data class MainModelDto(@PrimaryKey val id: String = "", val cert_type_id: String = "", val cert_vetform_id: String = "", val cert_status_id: String = "", val cert_nature_type_id: String = "", val cert_request_type_id: String = "", val cert_reqsource_type_id: String = "", val consignor_be_id: String = "", val consignor_ent_id: String = "", val consignee_be_id: String = "", val consignee_ent_id: String = "", val sub_product_id: String = "", val product_id: String = "", val doctor_id: String = "", val unit_guid: String = "", val unit_id: String = "",
                         val base_unit_id: String = "", val cert_date: String = "", val cert_insert_date: String = "", val weight: String = "", val base_weight: String = "",
                         val consignor_be_region_id: String = "", val consignor_ent_region_id: String = "", val consignee_be_region_id: String = "", val consignee_ent_region_id: String = "",
